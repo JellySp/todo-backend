@@ -23,4 +23,26 @@ public class TodoHardCodedService {
     public List<TodoBean> findAll() {
         return todos;
     }
+
+    public TodoBean deleteById(long id) {
+        TodoBean todo = findById(id);
+        if(todo == null) {
+            return null;
+        }
+        if (todos.remove(todo)) {
+            return todo;
+        }
+        return null;
+    }
+
+    public TodoBean findById(long id) {
+        for (TodoBean todo: todos) {
+            if (todo.id == id) {
+                return todo;
+            }
+        }
+        return null;
+    }
+
+
 }
