@@ -18,6 +18,19 @@ public class TodoHardCodedService {
         todos.add(new TodoBean(++idCounter, "Jelly","Learn to dance", new Date(), false));
         todos.add(new TodoBean(++idCounter, "Jelly","Learn programming", new Date(), false));
         todos.add(new TodoBean(++idCounter, "Jelly","Quit programming and build a house", new Date(), false));
+        todos.add(new TodoBean(++idCounter, "Jelly","Make footer scroll down", new Date(), false));
+        todos.add(new TodoBean(++idCounter, "Jelly","Waffles", new Date(), false));
+        todos.add(new TodoBean(++idCounter, "Jelly","Waffles", new Date(), false));
+        todos.add(new TodoBean(++idCounter, "Jelly","Waffles", new Date(), false));
+        todos.add(new TodoBean(++idCounter, "Jelly","Waffles", new Date(), false));
+        todos.add(new TodoBean(++idCounter, "Jelly","Waffles", new Date(), false));
+        todos.add(new TodoBean(++idCounter, "Jelly","Waffles", new Date(), false));
+        todos.add(new TodoBean(++idCounter, "Jelly","Waffles", new Date(), false));
+        todos.add(new TodoBean(++idCounter, "Jelly","Waffles", new Date(), false));
+        todos.add(new TodoBean(++idCounter, "Jelly","Waffles", new Date(), false));
+        todos.add(new TodoBean(++idCounter, "Jelly","Waffles", new Date(), false));
+        todos.add(new TodoBean(++idCounter, "Jelly","Waffles", new Date(), false));
+        todos.add(new TodoBean(++idCounter, "Jelly","Waffles", new Date(), false));
     }
 
     public List<TodoBean> findAll() {
