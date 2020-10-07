@@ -18,6 +18,11 @@ public class TodoController {
         return todoService.findAll();
     }
 
+    @GetMapping("/users/{username}/todos/{id}")
+    public TodoBean getTodo(@PathVariable String username, @PathVariable long id) {
+        return todoService.findById(id);
+    }
+
     // ResponseEntity is needed if there are many statuses. In this case for no content or not found
     @DeleteMapping("/users/{username}/todos/{id}")
     public ResponseEntity<Void> deleteTodo(@PathVariable String username, @PathVariable long id) {
