@@ -20,21 +20,23 @@ public class TodoHardCodedService {
         todos.add(new TodoBean(++idCounter, "Jelly","Quit programming and build a house", new Date(), false));
         todos.add(new TodoBean(++idCounter, "Jelly","Make footer scroll down", new Date(), false));
         todos.add(new TodoBean(++idCounter, "Jelly","Waffles", new Date(), false));
-        todos.add(new TodoBean(++idCounter, "Jelly","Waffles", new Date(), false));
-        todos.add(new TodoBean(++idCounter, "Jelly","Waffles", new Date(), false));
-        todos.add(new TodoBean(++idCounter, "Jelly","Waffles", new Date(), false));
-        todos.add(new TodoBean(++idCounter, "Jelly","Waffles", new Date(), false));
-        todos.add(new TodoBean(++idCounter, "Jelly","Waffles", new Date(), false));
-        todos.add(new TodoBean(++idCounter, "Jelly","Waffles", new Date(), false));
-        todos.add(new TodoBean(++idCounter, "Jelly","Waffles", new Date(), false));
-        todos.add(new TodoBean(++idCounter, "Jelly","Waffles", new Date(), false));
-        todos.add(new TodoBean(++idCounter, "Jelly","Waffles", new Date(), false));
-        todos.add(new TodoBean(++idCounter, "Jelly","Waffles", new Date(), false));
-        todos.add(new TodoBean(++idCounter, "Jelly","Waffles", new Date(), false));
+
     }
 
     public List<TodoBean> findAll() {
         return todos;
+    }
+
+    public TodoBean saveTodo(TodoBean todo) {
+        if (todo.getId() == -1 || todo.getId() == 0) {
+            todo.setId(++idCounter);
+            todos.add(todo);
+
+        } else {
+            deleteById(todo.getId());
+            todos.add(todo);
+        }
+        return todo;
     }
 
     public TodoBean deleteById(long id) {
