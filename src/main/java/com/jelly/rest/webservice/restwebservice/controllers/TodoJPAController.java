@@ -2,7 +2,6 @@ package com.jelly.rest.webservice.restwebservice.controllers;
 
 import com.jelly.rest.webservice.restwebservice.beans.TodoBean;
 import com.jelly.rest.webservice.restwebservice.interfaces.TodoJPARepository;
-import com.jelly.rest.webservice.restwebservice.services.TodoHardCodedService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,9 +15,6 @@ import java.util.List;
 @RestController
 @RequestMapping
 public class TodoJPAController {
-
-    @Autowired
-    private TodoHardCodedService todoService;
 
     @Autowired
     private TodoJPARepository todoJPARepository;
