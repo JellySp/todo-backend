@@ -1,24 +1,23 @@
 package com.jelly.rest.webservice.restwebservice.beans;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
 import java.util.Date;
 import java.util.Objects;
 
 @Data
+@Entity
+@NoArgsConstructor
+@Table
 public class TodoBean {
 
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    public Long id;
 
-    public TodoBean(long id, String username, String description, Date targetDate, boolean isDone) {
-        this.id = id;
-        this.username = username;
-        this.description = description;
-        this.targetDate = targetDate;
-        this.isDone = isDone;
-    }
-
-    public long id;
     private String username;
     private String description;
     private Date targetDate;
