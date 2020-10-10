@@ -1,5 +1,4 @@
 package com.jelly.rest.webservice.restwebservice.beans;
-
 import lombok.Data;
 
 @Data
