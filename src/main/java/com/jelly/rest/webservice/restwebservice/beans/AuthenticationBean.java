@@ -3,11 +3,11 @@ package com.jelly.rest.webservice.restwebservice.beans;
 import lombok.Data;
 
 @Data
-public class HelloWorldBean {
+public class AuthenticationBean {
 
     private final String message;
 
-    public HelloWorldBean(String message) {
+    public AuthenticationBean(String message) {
         this.message = message;
     }
 
