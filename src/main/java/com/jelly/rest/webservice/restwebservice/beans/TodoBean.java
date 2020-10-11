@@ -23,6 +23,9 @@ public class TodoBean {
     private Date targetDate;
     private boolean isDone;
 
+    @ManyToOne
+    private UserBean userBean;
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
